@@ -20,3 +20,24 @@ body {
       "Helvetica Neue", 
       sans-serif;
 }
+
+#wrapper {
+    padding: 100px;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+
+#chrono {
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+button{
+    font-size: 25px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
