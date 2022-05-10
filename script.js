@@ -36,6 +36,6 @@ const defilerTemps =() => {
     secondes++;
 
     if(secondes = 60);
-       minutes
+       minutes++;
        secondes = 0;
 }
