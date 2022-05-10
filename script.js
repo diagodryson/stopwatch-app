@@ -1,78 +1,76 @@
-let chrono = document.getElementById("chrono")
-let resetBtn = document.getElementById("reset")
-let stopBtn = document.getElementById("stop")
-let startBtn = document.getElementById("start")
+let chrono = document.getElementById("chrono");
+let resetBtn = document.getElementById("reset");
+let stopBtn = document.getElementById("stop");
+let startBtn = document.getElementById("start");
 
 let heures = 0;
 let minutes = 0;
 let secondes = 0;
 
-let timout;
+let timeout;
 
-let estArrrete = true;
+let estArrete = true;
 //start the stopwatch
 const demarrer = () => {
-    if(estArrrete){
-            estArrete = false;
-            defilerTemps();
-    }
+  if (estArrete) {
+    estArrete = false;
+    defilerTemps();
+  }
+};
+//stop the stopwatch
+const arreter = () => {
+  if (!estArrete) {
+    estArrete = true;
+    clearTimeout(timeout);
+  }
 };
 
-//if the stopwatch is stopped
-const arreter = () => {
-    if(estArrete){
-       estArrete = true;
-       clearTimeout(timeout);
-    }
-}
-
-const defilerTemps =() => {
-    if(estArrrete) return;
+const defilerTemps = () => {
+  if (estArrete) return;
 //set up time
-    secondes = parseInt(secondes);
-    minutes = parseInt(minutes);
-    heures = parseInt(heures);
+  secondes = parseInt(secondes);
+  minutes = parseInt(minutes);
+  heures = parseInt(heures);
 
-    secondes++;
+  secondes++;
 
-    if(secondes == 60){
-       minutes++;
-       secondes = 0;
-}
+  if (secondes == 60) {
+    minutes++;
+    secondes = 0;
+  }
 
-if (minutes ==60) {
+  if (minutes == 60) {
     heures++;
     minutes = 0;
-}
+  }
 
-//display
-if(secondes < 10) {
-     secondes = "0" + secondes;
-}
+  //display
+  if (secondes < 10) {
+    secondes = "0" + secondes;
+  }
 
-if(minutes < 10) {
+  if (minutes < 10) {
     minutes = "0" + minutes;
-}
+  }
 
-if(heures < 10) {
+  if (heures < 10) {
     heures = "0" + heures;
- }
+  }
 
- chrono.textContent = `${heures}:${minutes}:${secondes}`
- 
- timeout = setTimeout(defilerTemps, 1000);
+  chrono.textContent = `${heures}:${minutes}:${secondes}`;
+
+  timeout = setTimeout(defilerTemps, 1000);
 };
-
 //reset the stopwatch
 const reset = () => {
-    chrono.textContent = "00:00:00"
-    estArrete = true;
-    heures = 0;
-    minutes = 0;
-    secondes = 0;
-    clearTimeout(timeout);
+  chrono.textContent = "00:00:00";
+  estArrete = true;
+  heures = 0;
+  minutes = 0;
+  secondes = 0;
+  clearTimeout(timeout);
 };
 
-startBtn.addEventListener("click", start)
-stopBtn.addEventListener("click", stop)
-resetBtn.addEventListener("click", reset)
+startBtn.addEventListener("click", demarrer);
+stopBtn.addEventListener("click", arreter);
+resetBtn.addEventListener("click", reset);
