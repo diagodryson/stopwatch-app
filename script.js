@@ -25,3 +25,17 @@ const arreter = () => {
        //clear timeout
     }
 }
+
+const defilerTemps =() => {
+    if(estArrrete) return;
+//set up time
+    secondes = parseInt(secondes);
+    minutes = parseInt(minutes);
+    heures = parseInt(heures);
+
+    secondes++;
+
+    if(secondes = 60);
+       minutes
+       secondes = 0;
+}
