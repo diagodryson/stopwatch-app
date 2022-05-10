@@ -22,7 +22,7 @@ const demarrer = () => {
 const arreter = () => {
     if(estArrete){
        estArrete = true;
-       //clear timeout
+       clearTimeout(timeout);
     }
 }
 
@@ -57,4 +57,22 @@ if(minutes < 10) {
 if(heures < 10) {
     heures = "0" + heures;
  }
-}
+
+ chrono.textContent = `${heures}:${minutes}:${secondes}`
+ 
+ timeout = setTimeout(defilerTemps, 1000);
+};
+
+//reset the stopwatch
+const reset = () => {
+    chrono.textContent = "00:00:00"
+    estArrete = true;
+    heures = 0;
+    minutes = 0;
+    secondes = 0;
+    clearTimeout(timeout);
+};
+
+startBtn.addEventListener("click", start)
+stopBtn.addEventListener("click", stop)
+resetBtn.addEventListener("click", reset)
