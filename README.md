@@ -25,19 +25,15 @@ I created a stopwatch using modern syntax. A timer stopwatch using start, stop a
 - CSS
 - JavaScript
 
-[Back To The Top](#read-me-template)
-
 ---
 
 ## How To Use
 
-you can check the demo: <a href="https://stoopwatch-app.netlify.app/">Click Here</a>
+you can check the demo: https://stoopwatch-app.netlify.app/
 
 ## References
 
 inspiration: https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak
-
-[Back To The Top](#read-me-template)
 
 ---
 
