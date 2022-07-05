@@ -39,7 +39,7 @@ inspiration: https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak
 
 ## Author Info
 
-- Twitter - [@diagodryson](https://twitter.com/jamesqquick)
+- Twitter - [@diagodryson](https://twitter.com/diagodryson)
 - Linkedin - [@diagodryson](https://linkedin.com/in/diagodryson)
 
 [Back To The Top](#read-me-template)
